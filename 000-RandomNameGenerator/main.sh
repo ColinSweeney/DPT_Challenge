@@ -11,11 +11,11 @@ RANDVAL=1
 verbose=0
 
 #Treat arguments
-while getopts "gv:" opt; do
+while getopts "g:v:" opt; do
     case "$opt" in
     v)          verbose=1
                 ;;
-    g)          GENDER=$2
+    g)          GENDER="$OPTARG"
                 ;;
     \?)         echo "Invalid option: -$OPTARG" >&2
                 exit 1
